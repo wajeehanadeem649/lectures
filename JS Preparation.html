@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="externaljava.css">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+      #tweet{
+        color: rgb(206, 129, 28);
+        font-weight: bold;
+        
+      
+      }
+      #tweet p{
+        background-color: yellowgreen;
+      }
+    </style>
+</head>
+<body>                                       <!--Inline Javascript-->
+       <!--<button onclick="alert('Clicked');">Click me</button> -->  
+                                            <!--internal js
+       <script>
+alert("Welcome to javascript");
+       </script>    -->
+                                          <!--Access elements
+       <p id="text">This is some text</p>
+         <script>
+        //document.getElementById('text').innerHTML="Contents are changed";//
+      </script>-->
+                                          <!--Responding to click
+       <p id="text">This is some text</p>  
+       <button id="btn" >Clicked me</button>
+      <script>
+      document.getElementById("btn").onclick=function(){
+        document.getElementById("text").innerHTML="changed text";
+      }
+       </script>            
+     <script src="external.js"></script>-->
+
+
+
+                                          <!--Change website content
+     <p id="text">This is some text</p>  
+     <button id="btn" >Clicked me</button> 
+     <p id="second">This is another text</p>  
+     <button id="secondbtn" >Append text</button>
+     <script>
+      document.getElementById("btn").onclick= function(){
+        document.getElementById("text").innerHTML="changed text";
+      }
+      document.getElementById("secondbtn").onclick= function(){
+ document.getElementById("second").innerHTML= "YEs" +
+  document.getElementById("second").innerHTML + "JS"//
+
+  document.getElementById("second").innerHTML =
+  document.getElementById("second").innerHTML + "JS"
+}
+       </script>  
+       <p id="text"></p>  
+       <button id="btn" >Clicked me</button> 
+       <script>
+        document.getElementById("btn").onclick=function(){
+          document.getElementById("text").innerHTML="text added";
+        }
+       </script>-->
+                                               
+       
+                                               <!--Styles with js
+      <p id="text">This is text</p> 
+      <button id="btn">Click me</button>
+      <script>
+        document.getElementById("btn").onclick=function(){
+          document.getElementById("text").style.fontSize="40px" ;
+          document.getElementById("text").style.color="white" ;
+          document.getElementById("text").style.backgroundColor="red" ;
+          document.getElementById("text").style.fontWeight="bold" ;
+          document.getElementById("text").style.fontStyle="italic" ;
+          document.getElementById("text").style.display="none" ;
+        }
+      </script>--> 
+      
+      
+
+                                               <!--variables-->
+   <!--<script>
+    var x=1;
+    var y="Hello";
+    alert("x");
+    alert(y);
+
+    document.write(x);
+    console.log(x);
+   </script>  
+
+
+   <input type="text" id="inputtext">
+   <button id="btn">Click</button>
+   <p id="text" >This is text</p>
+   <script>
+    document.getElementById("btn").onclick = function(){
+      var x="";
+      x= document.getElementById("inputtext").value;
+      //alert(text);
+      document.getElementById("text").innerHTML= x;
+    }
+   </script>-->
+                                            
+   
+   
+                                                    <!--Arrays
+ <script>
+  var x =new Array();
+  x[0]= "HTML";
+  x[1]= "CSS";
+  x[2]= "JS";
+  x[3]= "PHP";
+  //document.write(x);
+ // document.write(x.length);  
+
+
+  var y=["HTML","CSS","JS","PHP"];
+  //y.push("javas","Dart");
+ // document.write(y); 
+ // document.write(y[0]); 
+ //y.splice(0,1);
+ y.splice(2,0,"Num");
+ document.write(y);
+ 
+ </script>   -->
+
+
+
+                                                  <!--if statement
+<script>
+var x=2;
+  if (x!=1) {
+document.write("true");
+  }else{
+document.write("false");
+  }
+</script> 
+
+
+
+<p>What is your favourite language</p>
+<input type="text" id="text">
+<button id="btn">Check</button>
+<script>
+  document.getElementById("btn").onclick=function(){
+var favlanguage="php";
+var y="";
+y= document.getElementById("text").value;
+    // alert(y);
+    if(favlanguage==y){
+alert("You got it!");
+    }else{
+      alert("Nope!Try Again...");
+
+    }  }-->
+
+
+
+                                                      <!--Loops
+
+
+<div id="tweet"></div>
+
+
+<script>
+    //for ( var i=5; i>0; i--){
+  //document.write("Hello" +' '+i);}
+  //var x=["Goood","Morning","Hello","Welcome"];
+  //for ( var i=0; i<5; i++)
+  //for ( var i=0; i<x.length; i++)
+  //{
+    //document.write( x[i]);
+    //}
+
+    var x=["Goood","Morning","Hello","Welcome"];
+    var y= " ";
+    for ( var i=0; i<x.length; i++){
+    y=y+"<p>"+x[i]+"</p>";
+  document.getElementById("tweet").innerHTML = y;}
+
+</script>-->
+
+                                                              <!--While loop
+<div id="tweet"></div>
+                                                      
+<script>
+  var x=["Goood","Morning","Hello","Welcome"];
+  var y= " ";
+  var i=0;
+  while(i<x.length){
+   
+    y=y+"<p>"+x[i]+"</p>";
+    document.getElementById("tweet").innerHTML = y;
+
+i++;
+  }
+</script>-->
+
+
+
+<button id="btn">Click</button>
+<!--functions
+
+ <script>
+  function x(a,b,c){
+    alert( a-b+c);
+  }
+  x(10,20,40);
+
+
+
+ var a=10;
+ var b=20;
+ var c=40;
+ var d=a+b+c;
+ document.write(d);
+
+document.getElementById("btn").onclick=function x(){
+ 
+  function x(a,b,c){
+    document.write( a-b+c);
+  }
+  x(10,20,40);}
+
+
+
+ </script>-->
+ 
+
+
+  </body>
+</html>
