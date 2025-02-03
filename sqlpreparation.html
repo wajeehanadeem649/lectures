@@ -1,0 +1,173 @@
+<?php
+//(@) sirf hamar error show hony k liy...die is liy use kia k hmain btay k eror to nae,("" )yh password k liy hota bydefault koi password nae hota ...root jo ha wo user name ha...
+@$link= mysqli_connect("localhost","root","") or die("connection failed!");
+@$db= mysqli_select_db($link,"school") or die("database error") ;
+
+
+
+                                                   //retrieve data from database
+//$query= "select * from user";
+
+//if($result=mysqli_query($link,$query)){
+ // $row= mysqli_fetch_array($result);
+// print_r($row);
+ // echo "<strong>Email</strong>"." ". $row['email']."<br>"."<i><b>"."Password"."</i><b>"."\n".$row['password']."<br>"."Id"."\n".$row['id'];
+  
+//}
+
+                                                 //update and insert data 
+
+//$query= "insert into user (email, password) values('wyyyyyyyyagh@g.com','hgf')";
+
+//$PASS="JJ";
+//$querys= "update user set email = '5' where id = 2";
+
+//mysqli_query($link,$querys);
+
+
+
+                             
+
+                                                     //looping data ctrl+U sy sourse show hoty
+//pora data show krwany k liy
+//$query="select * from user";
+//if($result = mysqli_query($link,$query)){
+//    while($row=mysqli_fetch_array($result)){
+//print_r($row);
+                                               //sirf email sabi ki show krwany k liy
+//$specific= $row['email'];
+//echo $specific."<br>";
+//    }
+//}
+
+
+
+
+
+
+                                                    //where command
+
+  /* $query= "select * from user  where id=1";
+   if($result= mysqli_query($link,$query)){
+    while( $row=mysqli_fetch_array($result)){
+    
+    print_r ($row);
+   }       }    
+   
+   
+echo "<br>";
+   $query= "select id from user  ";
+   if($result= mysqli_query($link,$query)){
+    while( $row=mysqli_fetch_array($result)){
+    
+    print_r ($row);
+   }       }
+
+
+   echo "<br>";  
+   $query= "select password from user where id=3 ";
+   if($result= mysqli_query($link,$query)){
+    while( $row=mysqli_fetch_array($result)){
+    
+    print_r ($row);
+   }       } 
+
+
+
+   echo "<br>";  
+   echo "<br>";  
+   $query= "select password from user where id>1 ";
+   if($result= mysqli_query($link,$query)){
+    while( $row=mysqli_fetch_array($result)){
+    
+    print_r ($row);
+   }       } 
+
+
+
+   echo "<br>";  
+   echo "<br>";  
+   $query= "select password from user where id>=1 And  email like '%@%'";
+   if($result= mysqli_query($link,$query)){
+    while( $row=mysqli_fetch_array($result)){
+    
+    print_r ($row);
+   }       }
+*/
+
+
+                                                      //session variables
+//session_start();
+//$_SESSION['username']="wajeeha";
+//echo $_SESSION['username'];
+
+
+                                                       // setcookie
+//setcookie("customers","1235",time() + 60*60*24);
+//echo $_COOKIE['customers'];
+                                                       //delete cookie
+//setcookie("customers","",time() -60*60*24);
+//echo $_COOKIE['customers'];
+                                                       //reset cookie
+/*setcookie("customers","",time() +60*60*24);
+$_COOKIE['customers']="1235";
+echo $_COOKIE['customers'];*/
+
+
+                                                            //security password
+//$password = "mypassword";
+//$password = "6yhjkgdeyhi98klgef";
+//echo $password;
+//echo md5($password);
+
+//$salt="hgfedr658";
+//echo md5($salt."password");
+//echo $password;
+//echo md5($password);
+
+?>
+
+
+<!--table ma data
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+        <th>Id</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+
+    <?php 
+  /*                                       //table ki form ma loop chla k sara data print kia
+       $query="select * from user";
+       $result = mysqli_query($link,$query);
+    while($row=mysqli_fetch_array($result)){
+
+        $id= $row['id'];                                              
+$specific= $row['email'];
+$specifics= $row['password'];
+*/
+?>
+        <tr>
+        <td>
+<?php echo $id;?>
+            </td>
+            <td>
+<?php echo $specific;?>
+            </td>
+            <td>
+            <?php echo $specifics;?>
+            </td>
+        </tr>
+<?php //}?>
+    </table>
+  
+</body>
+</html>-->
