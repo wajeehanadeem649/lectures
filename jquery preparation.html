@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+     <!--online jquery method
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+
+    <!--jquery offline method-->
+    <script  src="jquery-3.7.1.js"></script>
+
+    <!--jquery ui-->
+    <script src="jquery-ui-1.13.3/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="jquery-ui-1.13.3/jquery-ui.css">
+
+
+   
+<style>
+    #circle{
+width: 200px;
+height: 200px;
+background-color: blueviolet;
+border-radius: 50%;
+    }
+     #circle1{
+width: 200px;
+height: 200px;
+background-color: blueviolet;
+border-radius: 40%;
+    }
+   
+    .square{
+width: 200px;
+height: 200px;
+background-color: blueviolet;
+border-radius: 20%;
+float: left;
+margin: 10px;
+    }
+    #circle,.square:hover{
+        cursor: pointer;
+    }
+    #text{
+        margin: 50px;
+        width: 150px;
+        height: 150px;
+        float: left;
+    }
+
+    #draggable{
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+    }
+    #container{
+        background-color: blue;
+        width: 300px;
+        height: 200px;
+
+    }
+    #sortable{
+        background-color: aquamarine;
+    }
+</style>
+
+
+</head>
+<body>
+                                                     <!--installation->
+    hiii
+    <script>
+        if (typeof jQuery=="undefined"){
+            alert("jquery is not installed");
+        }else{
+            alert("jquery is installed");
+        }
+    </script>-->
+
+
+                                               <!--detecting a click
+
+<div id="circle">
+</div>
+<div class="square"></div>
+<div class="square"></div>
+
+<script>
+   // $("#circle").click(function(){
+    $("div").click(function(){
+       alert("click on a circle");
+          });
+</script>-->
+
+
+
+<!--changing website content
+
+<div id="circle">
+</div>
+<p id="text">This is some text</p>
+<button id="btn">btn</button>
+<script>
+   // $("#circle").click(function(){
+
+   // $("#circle").hover(function(){
+//$("#text").html("text has been changed");
+
+//$("#circle").click(function(){
+//alert($("#text").html());
+
+$("#btn").click(function(){
+    $("div").attr("id","square");
+    });
+</script>-->
+
+
+                                            <!--change webssite style
+
+<div id="circle"></div>
+<div class="square"></div>
+<div class="square"></div>
+<script>
+    //$("#circle").click(function(){
+       // $("#circle").css("width","400px");
+        //$("#circle").css("background-color","blue");
+        //alert($("#circle").css("background-color"));
+        //alert($("body").css("width"));
+
+        //$("div").click(function(){
+       // $("#circle").css("display","none");
+      // $(this).css("display","none");
+
+      $("div").click(function(){
+        if ($(this).attr("id") == "circle"){
+            alert("you clicked on circle");
+        }else{
+            alert("you clicked on square");
+        }
+      })
+    
+    </script>-->
+
+
+
+                              <!--fading content
+      
+        <div id="circle"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+  
+      
+      
+      <script>
+        $("div").click(function(){
+            //$(this).hide(1000);
+           // $(this).css("display","none");
+           //$(this).hide("fast");
+           //$(this).hide("slow");
+
+           //$(this).fadeOut("slow");
+           //$(this).slideUp("slow");
+           //$(this).slideUp("slow",function(){
+           // alert("slide is completed");
+           // $("div").css("display","block");
+         //  });
+        });
+      </script>  
+
+      
+
+      <p id="text">This is some text</p>
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
+      <button id="both">Toogle</button>
+
+      <script>
+ $("button").click(function(){
+    if ($(this).attr("id") == "show"){
+        alert("you clicked on show button");
+    }else{
+        alert("you clicked on hide button & toggle button");
+    }
+   })
+</script>
+
+      
+      <p id="text">This is some text</p>
+      <p id="text"><img src="c:\Users\AF\Pictures\web.jfif" ></p>
+      <iframe id="text" width="300" height="250" src="https://www.youtube.com/embed/YbkjGe7Re6k?si=8G4iduA-355zANi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><par></par>
+      <p id="text"><video src="https://youtu.be/1HglBxcDZUo?si=62s9SHUN2p6Ou7m5" ></video></p>
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
+      <button id="both">Toogle</button>
+           
+
+      <script>
+       
+        $("#hide").click(function(){
+        $("#text").hide();
+            // $("#text").fadeOut();})
+           // $("#text,#btn").css("display","none");
+        })
+      
+
+        $("#show").click(function(){
+        $("#text").fadeIn();});
+                 // $("#text").show();})
+
+
+            
+        $("#both").click(function(){
+        $("#text").toggle();})
+              // $("#text").fadeToggle();})
+              // $("#text").slideToggle();})
+         
+      </script>-->
+                                                           <!--animate
+      <div id="circle"></div>
+      <div id="circle1"></div>
+      <script>
+
+        $("#circle").click(function(){
+            $("#circle").animate({
+                width: "300px",
+                height: "400px",
+              marginLeft:"300px"
+
+            },function(){
+                $("#circle").css("background-color","blue");
+            });
+          
+           
+            $("#circle1").animate({
+                width: "300px",
+                height: "400px",
+              marginLeft:"300px"
+              
+
+            },function(){
+                $("#circle1").css("background-color","green");
+                
+            });
+        });          
+        </script>-->
+
+
+
+
+                                                      <!--regex
+
+<p></p>
+        <script>
+            //var regex=/is/;
+           // var regex=/Is/;
+            //var regex=/Is/i;
+            // regex=/i/;
+            var regex=/i/g;
+            var string="This is some text"
+            var result=string.match(regex);
+            //alert(result);
+            document.write(result);
+
+//$("p").html(result);
+        </script>-->
+
+
+
+                                                      <!--jquery ui
+
+<div id="draggable">This text is draggable</div>
+
+        <script>
+$("#draggable").draggable();
+        </script>-->
+
+
+        <!--draggables & Resizables
+        <div id="container">
+        <div id="draggable">This text is draggable</div></div>
+    
+    
+    
+    <script>
+//$("#draggable").draggable({axis: "y"});
+//$("#draggable").draggable({axis: "x"});
+
+//$("#draggable").draggable({containment: "#container"});
+//$("#draggable").draggable({containment: "parent"});
+
+
+//$("#draggable").resizable();
+//$("#draggable").resizable({alsoResize:"#container"});
+
+$("#draggable").resizable({ 
+   
+    resize: function( event, ui){
+    if ($("#draggable").height() < 1200){
+        alert("good");
+    }else{
+        alert("bad");
+    }
+}});
+
+    </script>-->
+
+
+
+                                                      <!--Droppable->
+  
+  <div id="container"> <div id="draggable">This text is draggable</div></div>
+
+<script>
+$("#draggable").draggable();
+$("#container").droppable({drop: function( event, ui){
+alert("good");
+}});
+
+</script>-->
+
+                                                       <!--accordians 
+
+
+<div id="accordion">
+    <h3>Html</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h3>CSS</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h3>Java</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+</div>
+
+<script>
+    $("#accordion").accordion();
+</script>-->
+
+
+
+
+                                            <!--sortable-->
+<div id="sortable">
+<ul id="sort">
+    <li style="background-color:blue;">Html</li>
+    <li >CSS</li>
+    <li >Javascript</li>
+    <li >Jquery</li>
+    
+  </ul>
+  </div>
+<script>
+    $("#sort").sortable();
+</script>
+ </body>
+</html>
